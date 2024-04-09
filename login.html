@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login | Myroslav Vsiakyi</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="register_login_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form id="login-form" onsubmit="loginUser(); return false;">
+        <h3>Login</h3>
+
+        <label for="username">Username</label>
+        <input type="text" id="login-username" name="username" placeholder="Username" required autocomplete="username">
+
+        <label for="password">Password</label>
+        <input type="password" id="login-password" name="password" placeholder="Password" required autocomplete="current-password">
+
+        <div id="auth-message-login" class="auth-message">
+            <div class="auth-message-content">
+                <p id="auth-message-content-login"></p>
+            </div>
+        </div>
+        <button type="submit">Log In</button>
+        <div class="buttons">
+            <div class="go">
+                <button id="google-login-btn" type="button" class="login-with-google-btn">
+                <i class="fab fa-google"></i> Login with Google
+                </button>
+            </div>
+            <div class="fb">
+                <button id="register-btn" type="button" class="register-btn">
+                <i class="fas fa-user-plus"></i> Register
+                </button>
+        </div>
+    </div>
+    </form>
+    <script>
+    document.getElementById("register-btn").addEventListener("click", function() {
+        window.location.href = "/register";
+    });
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>
